@@ -1,0 +1,41 @@
+.write{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.editor{
+    width:75vw;
+    height:100vh;
+    margin-top: 15px;
+    padding:10px;
+    border:2px solid #444;
+
+}
+.title{
+    width:100px;
+    padding: 10px;
+}
+.writegroup{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.publish{
+   margin-left:20px;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   background-color: teal;
+   color: aliceblue;
+   width:100px;
+
+}
+.publish:hover{
+    color:aqua;
+}
+
