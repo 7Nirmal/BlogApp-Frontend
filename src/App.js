@@ -13,12 +13,12 @@ import Userprofile from "./pages/Userprofile";
 
 
 function App() {
-  const user= {type:"user"}
+
   return (
     <>
-      {user.type==="user" &&  <Topbar/>} 
+  <Topbar/>
 <Routes>
-<Route path="/"  element={<Home/>}/>
+<Route path="/"   element={<Home/>}/>
 <Route path="/blogpage/:id" element={<Blogpage/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/register" element={<Register/>} />

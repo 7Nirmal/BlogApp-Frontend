@@ -1,40 +1,45 @@
 import "./post.css";
 import {Link} from "react-router-dom";
-export default function Post({img}){
+export default function Post({post}){
+
+  const PF ="http://localhost:8000/images/"
+
 return(
     <div>
     <div className="post">
-    <img
+{post.photo ? (
+      <img
       className="postImg"
-      src={img}
+      src={PF + post.photo}
       alt=""
     />
+) :(<img 
+  className="postImg"
+  src="https://archive.org/download/no-photo-available/no-photo-available.png"
+  alt="not-available"
+  />)}
     <div className="postInfo">
       <div className="postCats">
         <span className="postCat">
-          <Link className="link" to="/posts?cat=Music">
-            Music
-          </Link>
-        </span>
-        <span className="postCat">
-          <Link className="link" to="/posts?cat=Music">
-            Life
-          </Link>
+         {post.categories.map((cat,index)=>{
+          <>
+           <Link className="link" to={`/posts?cat=${cat}`}>
+           {cat}
+         </Link>
+         </>
+         })}
         </span>
       </div>
       <span className="postTitle">
-        <Link to="/Blogpage/:id" className="link">
-          Lorem ipsum dolor sit amet
+        <Link to={`/Blogpage/${post._id}`} className="link">
+       {post.title}
         </Link>
       </span>
       <hr />
-      <span className="postDate">1 hour ago</span>
+      <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
     </div>
     <p className="postDesc">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-      officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-      fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-      atque, exercitationem quibusdam, reiciendis odio laboriosam?
+    {post.desc}
     </p>
   </div>
     </div>

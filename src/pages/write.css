@@ -1,41 +1,83 @@
-.write{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.editor{
-    width:75vw;
-    height:100vh;
-    margin-top: 15px;
-    padding:10px;
-    border:2px solid #444;
-
-}
-.title{
-    width:100px;
-    padding: 10px;
-}
-.writegroup{
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.write {
+    padding-top: 50px;
+    background-color: whitesmoke;
+  }
+  
+  .writeImg {
+    margin-left: 50px;
+    width: 80vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .writeForm {
     position: relative;
-}
+  }
+  
+  .writeFormGroup {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .writeIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: rgb(129, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .writeInput {
+    margin:10px;
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 50vw;
+  }
+  
+  .writeInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+  }
+  
+  .writeInput:focus {
+    outline-style: none;
+  }
+  
+  .writeText {
+    width: 70vw;
+    height: 100vh;
+    font-family: inherit;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .writeSubmit {
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
 
-.publish{
-   margin-left:20px;
-   border: none;
-   border-radius: 5px;
-   padding: 10px;
-   background-color: teal;
-   color: aliceblue;
-   width:100px;
-
-}
-.publish:hover{
-    color:aqua;
-}
-
+ @media (min-width:768px) {
+    .writeFormGroup{
+        flex-direction: row;
+    }
+    .writeImg{
+        width:90vw;
+    }
+ }

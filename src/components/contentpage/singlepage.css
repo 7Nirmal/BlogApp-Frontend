@@ -5,6 +5,8 @@
   .singlePostWrapper {
     padding: 20px;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
   }
   
   .singlePostImg {
@@ -12,6 +14,14 @@
     height: 300px;
     border-radius: 5px;
     object-fit: cover;
+  }
+
+  .singlePostupdateimage{
+    width:30%;
+    height:100px;
+    object-fit: cover;
+    border-radius: 20px;
+
   }
   
   .singlePostTitle {
@@ -21,6 +31,18 @@
     font-family: "Lora", sans-serif;
   }
   
+  .singlePostTitleinput{
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: "Lora", sans-serif;
+    width:90vw ;
+    border:none;
+    border-bottom: 1px solid #444;
+  }
+  .singlePostTitleinput:focus{
+outline: none;
+  }
   .singlePostEdit {
     float: right;
     font-size: 16px;
@@ -61,4 +83,50 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
+  }
+
+  .updatedesc{
+    height:30vh;
+    width:90vw ;
+  }
+  .updatedesc:focus{
+outline: none;
+  }
+
+  .buttons-updatepage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+  }
+
+  .updatebutton{
+    background-color: teal;
+    color:antiquewhite;
+    border-radius:5px;
+    padding: 5px;
+  }
+
+  .updatebutton:hover{
+    color: aquamarine;
+  }
+
+
+  .deletebutton{
+    background-color: red;
+    color:antiquewhite;
+    border-radius:5px;
+    padding: 5px;
+  }
+  .deletebutton:hover{
+    color: black
+  }
+
+  .update-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
   }
